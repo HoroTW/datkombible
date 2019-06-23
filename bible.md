@@ -1175,7 +1175,7 @@ Der Aufbau einer logischen Verbindung in der Schicht 2 ist Voraussetzung für di
 - Taktgeber von Sender & Empfänger über längeren Zeitraum synchronisieren
 - vor eigentlichen Daten -> bestimmtes Signal -> Empfänger ermittelt Kennzeitpunkte -> justieren des Taktgebers
 - Signalvorlauf wird in Schicht 2 erzeugt
-	- unterstützt Schicht-1-Instanz nicht im Partnersystem 
+	- unterstützt Schicht-1-Instanz im Partnersystem 
 	- für eigene horizontale Kommunikation nicht nötig
 - verwendete Mittel zur Realisierung:
 	- Signalvorlauf, selbsttaktendes Signal
