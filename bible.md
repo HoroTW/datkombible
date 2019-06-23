@@ -90,7 +90,7 @@ __Was Junker-Schilling wirklich lesen will:__
 
 ### Sonderfall: Subnetze genau /24
 
-man hat 256 mögliche Subnetze, also schreibt man: 
+man hat 256 mögliche IP Adressen im Subnetz, also schreibt man: 
 
 IP.IP.IP.0 -> __Subnetzadresse__!
 
