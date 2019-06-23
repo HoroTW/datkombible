@@ -963,7 +963,7 @@ NRZ = no return to zero => der Pegel kehrt nicht nach jeder Zeiteinheit auf den 
 - wie bei unipolar NRZ, nur dass wir bei der 1 ins "negative und bei der nächsten 1 wieder ins positive 1
 
 
-![](./img/ami.png)\
+![](./img/zweiwertiges_ami.png)\
 
 
 ### Manchester-Signal
