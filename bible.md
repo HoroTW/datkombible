@@ -879,7 +879,7 @@ __Abhilfe:__
 ### Basisbandübertragung
 - gesamtes Frequenzspektrum wird für die Übertragung genutzt
 
-### Bandübertragung 
+### Breitbandübertragung 
 
 __eigentlich Trägersignalverfahren__:
 
@@ -927,7 +927,7 @@ NRZ = no return to zero => der Pegel kehrt nicht nach jeder Zeiteinheit auf den 
 
 
 ![NRZ unipolar](./img/nrz_up.png)\
-
+ 
 
 ### NRZ bipolar
 - einziger Unterschied zu NRZ unipolar: bei gesendeter "0" entsteht eine negative Spannung
