@@ -879,7 +879,7 @@ __Abhilfe:__
 ### Basisbandübertragung
 - gesamtes Frequenzspektrum wird für die Übertragung genutzt
 
-### Bandübertragung 
+### Breitbandübertragung 
 
 __eigentlich Trägersignalverfahren__:
 
