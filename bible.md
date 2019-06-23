@@ -688,7 +688,10 @@ __lokales System__
 	- (N-1) bereitet Datenübertragung vor
 5. (N-1)-DATA\_CONFIRMATION
 	- asynchrones Warten endet von (N)
+
+
 __Partnersystem__ (entferntes System)
+
 6. (N-1)-DATA\_INDICATION -> (N-1) wartet asynchron
 7. (N-1)-DATA\_RESPONSE
 	- (N) interpretiert PDU und prüft, ob Verbindungsaufbau möglich
@@ -1312,7 +1315,7 @@ Huckepack-Quittierung
 - Quittungen werden an "sowieso zu übertragenden" PDUs angehängt
 
 ### Fehleranzeige
-- es ist erforderlich einen Fehler anzuzeigen, wenn dieser mit den Mitteln der eigenen Schicht behebbar ist
+- es ist erforderlich einen Fehler anzuzeigen, wenn dieser mit den Mitteln der eigenen Schicht nicht behebbar ist
 - Instanz der höheren Schicht wird auf das ungelöste Problem hingewiesen
 
 __Wiederherstellungsverfahren__
@@ -1593,7 +1596,7 @@ Wenn in der Klausur nur nach dem Routing (Wegewahl) gefragt wird, dann auch nur 
 ### Vorteile
 - größerer Adressraum (4fach mehr als IPv4)
 - PCI wird eingespart -> weniger Overhead bei Datenübertragung
-- unterstützt isochronische Dienste
+- unterstützt isochrone Dienste
 
 ### Priorität / Flow Label
 - Datenströme "klassischer" Anwendungen (News, Email, FTP) können von z.B. Multimediadaten getrennt werden
@@ -1651,7 +1654,7 @@ __Unterschied zu X.25__: X.25 in Schicht 3 und MPLS in Schicht 2
 ## Transportschicht
 - auch Ende-zu-Ende-Kontrolle genannt
 - logische Schnittstelle zum gesamten Übertragungssystem
-- bietet den anwendugnsorientierten Schichten (5-7) einheitlichen Zugriff
+- bietet den anwendungsorientierten Schichten (5-7) einheitlichen Zugriff
 
 ### Aufgaben
 - Ende-zu-Ende-Kontrolle
@@ -2098,7 +2101,7 @@ Da im WLAN das CSMA/CD Verfahren nicht funktionieren, werden 3 weitere vorgestel
 	- Zugriffe während der Übertragung von außen
 	- Zugriffe durch (Fern) Kommunikationstechnik aufs System
 2. Verlust der Integrität (wurden Daten bei der Übertragung verändert?)
-	- nur genau die erforderlichen Änderungen an Hinhalten erfolgen
+	- nur genau die erforderlichen Änderungen an Inhalten erfolgen
 	- Erkennbarkeit von Änderungen
 3. Verlust der Verbindlichkeit (Nichtabstreitbarkeit)
 	- ist der Sender derjenige, der es vorgibt zu sein?
@@ -2312,9 +2315,9 @@ __IPsec = AH + ESP + SPD + SAD__
 ### WS16 / 17
 
 1. Erklären Sie folgende Begriffe (6 P)
-	- Übertragungsgeschwindigkeit/Schrittgeschwindigkeit [__Lösung__](./img/#signalklassen)
+	- Übertragungsgeschwindigkeit/Schrittgeschwindigkeit [__Lösung__](#signalklassen)
 	- [CONS](./img/#cons)/[CLNS](./img/#clns)
-	- Kollisionserkennung [__Lösung__](./img/#csma-cd) 
+	- Kollisionserkennung [__Lösung__](#csma-cd) 
 
 2. Wahr / Falsch (12 P)
 	- Kann bei IPSec das Zusatzprotokoll AH vollständig durch das Zusatzprotokoll ESP ersetzt
@@ -2323,17 +2326,17 @@ werden? (Lsg.: Falsch, AH und ESP gehören funktional zur 3. Schicht und eins ka
 	- Die Echokompensation gehört zum Multiplexverfahren (Lsg.: Richtig)
 	- Durch die Rahmenbildung kann eine vollständige Transparenz geschaffen werden
 
-3. Eine Kommunikation zwischen Systemen, die gemäß dem OSI-Referenzmodell aufgebaut sind, führt dazu, dass jede Instanz in einem derartigen System unterschiedliche Kommunikationsaufgaben in einander verzahnt auszuführen hat. Dabei treten verschiedene __Wartezustände__ auf. Benennen und erläutern Sie alle Wartezustände und nennen Sie jeweils ein Beispiel. (5 P) [__Lösung__](./img/#wartezustände)
+3. Eine Kommunikation zwischen Systemen, die gemäß dem OSI-Referenzmodell aufgebaut sind, führt dazu, dass jede Instanz in einem derartigen System unterschiedliche Kommunikationsaufgaben in einander verzahnt auszuführen hat. Dabei treten verschiedene __Wartezustände__ auf. Benennen und erläutern Sie alle Wartezustände und nennen Sie jeweils ein Beispiel. (5 P) [__Lösung__](#wartezustände)
 
 4. Welches Ziel soll mit dem Byte-Fenstermechanismus und dem Stau-Fenstermechanismus erreicht
 werden? (2 P)
 	- Erläutern Sie, wie das Ziel dieser beiden Mechanismen erreicht wird (4 P)
-	- [__Lösung__](./img/#staufenstermechanismus)
+	- [__Lösung__](#staufenstermechanismus)
 
 5. Beschreiben Sie ausführlich die Behandlung eines Datagramms durch einen Router. Benutzen und
-erläutern Sie dabei folgende Begriffe: Adressauflösung / Netzmaske / Routing-Tabelle / TTL (12 P) [__Lösung__](./img/#behandlung-datagramm)
+erläutern Sie dabei folgende Begriffe: Adressauflösung / Netzmaske / Routing-Tabelle / TTL (12 P) [__Lösung__](#behandlung-datagramm)
 
-6. IP: 117.75.100.255/22 bzw. /28 (3 P) [__Vorgehensweise__](./img/#datenkommunikation)
+6. IP: 117.75.100.255/22 bzw. /28 (3 P) [__Vorgehensweise__](#datenkommunikation)
 	- Ping gleicher Adressen > siehe Klausur SS06 – Aufgabe 6c (5 P)
 	- Routing Tabelle > diesmal mit deutschen Bezeichnungen der Tabelle (Anstatt Mask >
 Dezimalmaske, anstatt Interface > Schnittstelle und es kam noch eine Spalte in der Tabelle dazu:
@@ -2348,38 +2351,38 @@ Verschlüsselungsverfahren Sinn macht. (6 P)
 
 ### SS 16
 1. Definitionen
-	- Erklären Sie Trägersignalverfahren (3 P) [__Lösung__](./img/#bandübertragung)
-	- Rahmenbildung (1 P) [__Lösung__](./img/#rahmenbildung-blockbildung-blockbegrenzung)
-	- Was ist ein aktiver Angriff? (2 P) [__Lösung__](./img/#aktiver-angriff)
+	- Erklären Sie Trägersignalverfahren (3 P) [__Lösung__](#bandübertragung)
+	- Rahmenbildung (1 P) [__Lösung__](#rahmenbildung-blockbildung-blockbegrenzung)
+	- Was ist ein aktiver Angriff? (2 P) [__Lösung__](#aktiver-angriff)
 
 2. Wahr / Falsch (10 P)
 
 3. Beschreiben Sie nur die Wegewahl (Routing) der folgenden Protokolle
-	- x.25 (6 P) [__Lösung__](./img/#x25)
-	- IPv4 (4 P) [__Lösung__](./img/#behandlung-datagramm)
-	- MPLS (3 P) [__Lösung__](./img/#mpls)
+	- x.25 (6 P) [__Lösung__](#x.25)
+	- IPv4 (4 P) [__Lösung__](#behandlung-datagramm)
+	- MPLS (3 P) [__Lösung__](#mpls)
 
 4. IP Berechnung (3 P) // Routingtabelle (5 P)
 
-5. Staufenstermechanismus [__Lösung__](./img/#staufenstermechanismus)
+5. Staufenstermechanismus [__Lösung__](#staufenstermechanismus)
 	- Was bringt ein Staufenstermechanismus (also das Ziel) (1 P)
 	- Staufenster erklären (Mechanismus nicht notwendig, stand auch in der Aufgabenstellung,
 sondern nur was das Fenster bringt und welche Ziele damit erreicht werden) (3 oder 4 P)
-	- Warum bzw. wann im Transportsystem eine Vollständigkeitskontrolle sinnvoll ist? [__Lösung__](./img/#vollständigkeitskontrolle)
+	- Warum bzw. wann im Transportsystem eine Vollständigkeitskontrolle sinnvoll ist? [__Lösung__](#vollständigkeitskontrolle)
 	- Was ist eine Vollständigkeitskontrolle und Sequenzkontrolle?
 
-6. Was sind die Grundprobleme der IT-Sicherheit? (4 P) [__Lösung__](./img/#problemfelder)
-	- Erklären Sie den Replay-Angriff (2 P) [__Lösung__](./img/#replay-angriff)
+6. Was sind die Grundprobleme der IT-Sicherheit? (4 P) [__Lösung__](#problemfelder)
+	- Erklären Sie den Replay-Angriff (2 P) [__Lösung__](#replay-angriff)
 	- Welches Grundproblem wird durch den Replay-Angriff verletzt?
 
-7. Erläutern Sie, wie beim IPSec das End-to-End-VPN und das Site-to-Site-VPN mithilfe eines Zusatzprotokolls und dem entsprechenden Modus dieses Protokolls realisiert wird (4 P) [__Lösung__](./img/#ipsec)
+7. Erläutern Sie, wie beim IPSec das End-to-End-VPN und das Site-to-Site-VPN mithilfe eines Zusatzprotokolls und dem entsprechenden Modus dieses Protokolls realisiert wird (4 P) [__Lösung__](#ipsec)
 
 ### WS15/16
 1. Aufgabe
-	- Was ist Domain Name Service (DNS)? [__Lösung__](./img/#dns-domain-name-service)
-	- Was ist ein Social-Engineering Angriff [__Lösung__](./img/#angriffsmethoden-auf-verschlüsselungsverfahren)
-	- End-to-site-VPN [__Lösung__](./img/#end-to-site-vpn)
-	- Codemultiplex [__Lösung__](./img/#codemultiplex)
+	- Was ist Domain Name Service (DNS)? [__Lösung__](#dns-domain-name-service)
+	- Was ist ein Social-Engineering Angriff [__Lösung__](#angriffsmethoden-auf-verschlüsselungsverfahren)
+	- End-to-site-VPN [__Lösung__](#end-to-site-vpn)
+	- Codemultiplex [__Lösung__](#codemultiplex)
 
 2. Aufgabe
 	- Ist das ein selbsttaktendes Singal? (Bild)
@@ -2391,13 +2394,13 @@ sondern nur was das Fenster bringt und welche Ziele damit erreicht werden) (3 od
 
 3. Erklären Sie:
 	-	Umtastung
-	- Zugriffsverfahren [__Lösung__](./img/#zugriffsverfahren)
-	- Integrität [__Lösung__](./img/#problemfelder)
-	- Synchronisation [__Lösung__](./img/#synchronisation)
-	- Rahmenbildung [__Lösung__](./img/#rahmenbildung-blockbildung-blockbegrenzung)
-	- Transparenz [__Lösung__](./img/#transparenz)
+	- Zugriffsverfahren [__Lösung__](#zugriffsverfahren)
+	- Integrität [__Lösung__](#problemfelder)
+	- Synchronisation [__Lösung__](#synchronisation)
+	- Rahmenbildung [__Lösung__](#rahmenbildung-blockbildung-blockbegrenzung)
+	- Transparenz [__Lösung__](#transparenz)
 
-4. Gemeinsamkeiten von IPv4 und X.25 (12 P) [__Lösung__](./img/#gemeinsamkeiten)
+4. Gemeinsamkeiten von IPv4 und X.25 (12 P) [__Lösung__](#gemeinsamkeiten)
 
 - Unterschiede bezüglich:
 	- Sicherheit
@@ -2407,7 +2410,7 @@ sondern nur was das Fenster bringt und welche Ziele damit erreicht werden) (3 od
 
 5. Aufgabe (10 P)
 
-	- Zwischen zwei Rechnern A und B soll eine Transportverbindung aufgebaut werden. Beschreiben Sie ausführlich die wesentlichen Aktionen und Wartezustände innerhalb der Transportinstanz des Initiators sowie deren Kommunikation an den Schnittstellen zu den benachbarten Instanzen unter der Voraussetzung, dass ein verbindungsorientierter Netzdienst (CONS) benutzt wird. [__Lösung__](./img/#verbindungsaufbau)
+	- Zwischen zwei Rechnern A und B soll eine Transportverbindung aufgebaut werden. Beschreiben Sie ausführlich die wesentlichen Aktionen und Wartezustände innerhalb der Transportinstanz des Initiators sowie deren Kommunikation an den Schnittstellen zu den benachbarten Instanzen unter der Voraussetzung, dass ein verbindungsorientierter Netzdienst (CONS) benutzt wird. [__Lösung__](#verbindungsaufbau)
 	- Erläutern Sie die Änderungen gegenüber der Lösung zum Teil a), wenn die Protokolle TCP/IP genutzt werden.
 
 6. Aufgabe (10 P)
@@ -2422,9 +2425,9 @@ sondern nur was das Fenster bringt und welche Ziele damit erreicht werden) (3 od
 ### SS15 
 
 1. Erläutern Sie folgende Begriffe: (6 P)
-	- Wellenlängenmultiplex [__Lösung__](./img/#frequenzmultiplex)
-	- Transitnetz [__Lösung__](./img/#transitnetz)
-	- Brute-Force-Angriff [__Lösung__](./img/#angriffsmethoden-auf-verschlüsselungsverfahren)
+	- Wellenlängenmultiplex [__Lösung__](#frequenzmultiplex)
+	- Transitnetz [__Lösung__](#transitnetz)
+	- Brute-Force-Angriff [__Lösung__](#angriffsmethoden-auf-verschlüsselungsverfahren)
 
 
 2. Entscheiden Sie, ob die folgenden Aussagen richtig oder falsch sind. Begründen Sie Ihre Entscheidung. (10 P)
@@ -2434,14 +2437,14 @@ sondern nur was das Fenster bringt und welche Ziele damit erreicht werden) (3 od
 	- Bleibt bei einer TCP-Verbindung der Empfang einer neuen Quittungsnummer aus, kann man immer auf einen Stau schließen.
 	- Eine Schichtenarchitektur führt immer zu einer effizienten und leicht änderbaren Struktur eines Systems.
 
-3. Aufgabe (2+3+3+2 P) [__Lösung__](./img/#rahmenbildung-blockbildung-blockbegrenzung)
+3. Aufgabe (2+3+3+2 P) [__Lösung__](#rahmenbildung-blockbildung-blockbegrenzung)
 	- Welche Bedeutung hat die Rahmenbildung in Protokollen der Sicherungsschicht?
 	- Welche Konsequenz ergibt sich aus der Rahmenbildung für die Behandlung von Nutzdaten?
 	- Erläutern Sie, wie das HDLC-Protokoll die Rahmenbildung realisiert und die Behandlung der Nutzdaten durchführt
 	- Beschreiben Sie eine alternative Lösung zur Rahmenbildung
 
 
-4. Aufgabe (10 P)[__Lösung__](./img/#dynamischer-fenstermechanismus)
+4. Aufgabe (10 P)[__Lösung__](#dynamischer-fenstermechanismus)
 
 Beschreiben Sie den Algorithmus für den Empfang einer Daten-PDU, wenn eine passive Fehlerkontrolle mit dynamischen Fenster zur Kommunikationssteuerung eingesetzt wird.
 
@@ -2458,7 +2461,7 @@ Beschreiben Sie den Algorithmus für den Empfang einer Daten-PDU, wenn eine pass
 ![](./img/routingtabelle.png)\
 
 
-6. Aufgabe (10 P) [__Lösung__](./img/#wolkenaufgabe)
+6. Aufgabe (10 P) [__Lösung__](#wolkenaufgabe)
 
 Betrachten sie folgende Netzskizze:
 
@@ -2472,7 +2475,7 @@ Vom Client-Rechner 197.214.19.175 wird erstmals der Aufruf http://www.shop.domai
 	- Sie brauchen nicht jede einzelne PDU zu beschreiben bzw. zu analysieren. Es genügt, wenn Sie die Bedeutung bzw. Auswirkung einer Übertragung erläutern.
 
 
-7. Aufgabe (4+4 P) [__Lösung__](./img/#sicherheitsprotokolle)
+7. Aufgabe (4+4 P) [__Lösung__](#sicherheitsprotokolle)
 	- Erläutern Sie mit eigenen Worten den Begriff „Virtual Private Network“ (VPN) und beschreiben Sie den Unterschied zwischen End-to-End-VPN einem Site-to-Site-VPN. 
 	- Es sollen jeweils ein End-to-End-VPN und Site-to-Site-VPN auf Basis IPsec realisiert werden. Beschreiben Sie ausführlich, welche Protokolle jeweils in welchem Modus zur Realisierung eingesetzt werden müssen.
 
@@ -2480,9 +2483,9 @@ Vom Client-Rechner 197.214.19.175 wird erstmals der Aufruf http://www.shop.domai
 ### WS14/15
 
 1. Erläutern Sie ausführlich folgende Begriffe
-	- Codemultiplex [__Lösung__](./img/#codemultiplex)
-	- Halbduplexverfahren [__Lösung__](./img/#codemultiplex)
-	- Distributed-Denial-of-Service [__Lösung__](./img/#Denial-of-Service-Angriff)
+	- Codemultiplex [__Lösung__](#codemultiplex)
+	- Halbduplexverfahren [__Lösung__](#codemultiplex)
+	- Distributed-Denial-of-Service [__Lösung__](#denial-of-service-angriff)
 
 2. Bewerten Sie, ob folgende Aussagen Wahr oder Falsch sind und begründen Sie ihre Entscheidung.
 	- Die Dämpfung eines Signals ist nur von der benutzten Frequenz abhängig.
@@ -2493,11 +2496,11 @@ Vom Client-Rechner 197.214.19.175 wird erstmals der Aufruf http://www.shop.domai
 
 3. Beschreiben Sie die wesentlichen Schritte bei der Wegewahl durch eine Netzkomponente bei Verwendung der folgenden Protokolle:
 	- ITU-T-Empfehlung X.25
-	- IPv4 [__Lösung__](./img/#behandlung-datagramm)
-	- MPLS [__Lösung__](./img/#mpls)
+	- IPv4 [__Lösung__](#behandlung-datagramm)
+	- MPLS [__Lösung__](#mpls)
 
 4. Welches Ziel soll mithilfe des Staufenstermechanismus im TCP erreicht werden? (1 Punkt)
-[__Lösung__](./img/#staufenstermechanismusm)
+[__Lösung__](#staufenstermechanismus)
 5. Erläutern Sie die Arbeitsweise des Staufenstermechanismus im TCP (4 Punkte)
 
 6. Begründen Sie, wieso damit das Ziel erreicht wird. (1 Punkt)
@@ -2534,7 +2537,7 @@ Hinweise:
 
 
 10. Erläutern Sie ausführlich die Zugriffssteuerung gemäß CSMA/CD. (4 Punkte)
-[__Lösung__](./img/#csma-cd) 
+[__Lösung__](#csma-cd) 
 
 11. Welche Konsequenz ergibt sich daraus für die MAC-Schicht bei Ethernet? (1 Punkt)
 
@@ -2543,9 +2546,9 @@ Hinweise:
 
 1. Erläutern Sie ausführlich folgende Begriffe (6 Punkte)
 
-	- Vorwärtsfehlerkorrektur [__Lösung__](./img/#fehlerbehandlung) 
-	- Statistischer Zeitmultiplex [__Lösung__](./img/#fehlerbehandlung) 
-	- Hidden-Terminal-Problem [__Lösung__](./img/#hidden-terminal-problem) 
+	- Vorwärtsfehlerkorrektur [__Lösung__](#fehlerbehandlung) 
+	- Statistischer Zeitmultiplex [__Lösung__](#fehlerbehandlung) 
+	- Hidden-Terminal-Problem [__Lösung__](#hidden-terminal-problem) 
 
 
 2. Entscheiden Sie, ob folgende Aussagen richtig oder falsch sind. Begründen Sie Ihre Entscheidung. (10 Punkte)
@@ -2559,11 +2562,11 @@ Hinweise:
 
 3. Aufgabe (6 Punkte)
 
-	- Erläutern Sie ausführlich den Begriff Synchronisation, wie er in der Schicht 2 benutzt wird, und die zur Realisierung verwendeten Mittel  [__Lösung__](./img/#synchronisation) 
-	- Erläutern Sie die Arbeitsweise des Funktionspaares Segmentieren und Reassemblieren. [__Lösung__](./img/#segmentieren-reassembilieren)
+	- Erläutern Sie ausführlich den Begriff Synchronisation, wie er in der Schicht 2 benutzt wird, und die zur Realisierung verwendeten Mittel  [__Lösung__](#synchronisation) 
+	- Erläutern Sie die Arbeitsweise des Funktionspaares Segmentieren und Reassemblieren. [__Lösung__](#segmentieren-reassembilieren)
 
 
-4. Aufgabe (3 + 8 Punkte)  [__Lösung__](./img/#x.25-und-ipv4)
+4. Aufgabe (3 + 8 Punkte)  [__Lösung__](#x.25-und-ipv4)
 
 	Vergleichen Sie die wesentlichen Schritte bei einer Datenübertragung mittels verbindungsorientierter Kommunikation in der Netzwerkschicht. Dabei sollen Sie auf die Protokolle X.25 bzw. IPv4 Bezug nehmen
 
@@ -2571,7 +2574,7 @@ Hinweise:
 	- Beschreiben Sie ausführlich die Unterschiede derartiger Kommunikationsvorgänge
 
 
-5. Aufgabe (10 Punkte) [__Lösung__](./img/#dynamischer-fenstermechanismus)
+5. Aufgabe (10 Punkte) [__Lösung__](#dynamischer-fenstermechanismus)
 
 	Beschreiben Sie den Algorithmus für den Empfang einer Daten-PDU, wenn eine passive Fehlerkontrolle mit dynamischem Fenster zur Kommunikationssteuerung eingesetzt wird.
 
