@@ -96,7 +96,7 @@ IP.IP.IP.0 -> __Subnetzadresse__!
 
 jede beliebige IP ist da drin
  
-IP.IP.IP.255 -> __Broadcast, 32-24 = 8 --> 2^8 = 256 --> 256-1 = 255__!
+IP.IP.IP.255 -> __Broadcast__! ($32-24 = 8$ --> $2^8 = 256$ --> $256-1 = 255$)
 
 \newpage
 
